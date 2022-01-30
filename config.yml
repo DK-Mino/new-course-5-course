@@ -1,0 +1,16 @@
+title: New course 5
+description: My fifth course!
+template:
+  repo: new-course-5-template
+  name: new-course-5
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
